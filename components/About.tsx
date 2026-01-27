@@ -1,10 +1,11 @@
 import AnimateIn from "@/components/AnimateIn";
+import Image from "next/image";
 
 export default function About() {
   return (
     <section
       id="about"
-      className="relative scroll-mt-24 pt-10 pb-24 overflow-hidden"
+      className="relative scroll-mt-24 pt-16 pb-28 overflow-hidden"
     >
       {/* background glow */}
       <div className="absolute inset-0 -z-10">
@@ -21,52 +22,77 @@ export default function About() {
               Me
             </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mb-20">
+          <p className="text-gray-400 max-w-2xl mb-16">
             Who I am, how I think, and what I focus on as a software developer.
           </p>
         </AnimateIn>
 
-        <div className="grid gap-12 lg:grid-cols-2">
-          {/* LEFT MAIN CARD */}
+        <div className="grid gap-12 lg:grid-cols-2 items-start">
+          {/* LEFT COLUMN */}
           <AnimateIn>
-            <div
-              className="
-                relative rounded-3xl p-8 md:p-10
-                bg-white/5 backdrop-blur-xl
-                border border-white/10
-                shadow-2xl
-              "
-            >
-              {/* subtle gradient overlay */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-transparent pointer-events-none" />
+            <div className="space-y-10">
+              {/* IMAGE CARD */}
+              <div
+                className="
+                  relative w-[260px] h-[320px] mx-auto lg:mx-0
+                  rounded-3xl overflow-hidden
+                  bg-white/5 backdrop-blur-xl
+                  border border-white/10
+                  shadow-2xl
+                "
+              >
+                {/* glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 blur-2xl opacity-40" />
 
-              <h3 className="relative text-2xl font-semibold mb-6">
-                Developer Profile
-              </h3>
+                <Image
+                  src="/images/vivek.jpg"
+                  alt="Vivek - Software Developer"
+                  fill
+                  priority
+                  className="relative object-cover rounded-3xl"
+                />
+              </div>
 
-              <p className="relative text-gray-300 leading-relaxed mb-5">
-                I am a BCA student and aspiring software developer focused on
-                building clean, scalable, and production-ready applications.
-                My core strengths include Java, Data Structures, and modern
-                full-stack development using Next.js and TypeScript.
-              </p>
+              {/* PROFILE CARD */}
+              <div
+                className="
+                  relative rounded-3xl p-8 md:p-10
+                  bg-white/5 backdrop-blur-xl
+                  border border-white/10
+                  shadow-2xl
+                "
+              >
+                {/* gradient overlay */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-transparent pointer-events-none" />
 
-              <p className="relative text-gray-400 leading-relaxed">
-                I prioritize real-world engineering practices—clear architecture,
-                maintainable code, and user-focused design—over shortcuts or
-                superficial implementations.
-              </p>
+                <h3 className="relative text-2xl font-semibold mb-6">
+                  Developer Profile
+                </h3>
 
-              {/* stats */}
-              <div className="relative mt-10 grid grid-cols-3 gap-6">
-                <Stat label="Projects Built" value="10+" />
-                <Stat label="Tech Stack" value="MERN" />
-                <Stat label="Focus" value="Full-Stack" />
+                <p className="relative text-gray-300 leading-relaxed mb-5">
+                  I am a BCA student and aspiring software developer focused on
+                  building clean, scalable, and production-ready applications.
+                  My core strengths include Java, Data Structures, and modern
+                  full-stack development using Next.js and TypeScript.
+                </p>
+
+                <p className="relative text-gray-400 leading-relaxed">
+                  I prioritize real-world engineering practices—clear architecture,
+                  maintainable code, and user-focused design—over shortcuts or
+                  superficial implementations.
+                </p>
+
+                {/* stats */}
+                <div className="relative mt-10 grid grid-cols-3 gap-6">
+                  <Stat label="Projects Built" value="10+" />
+                  <Stat label="Tech Stack" value="MERN" />
+                  <Stat label="Focus" value="Full-Stack" />
+                </div>
               </div>
             </div>
           </AnimateIn>
 
-          {/* RIGHT STACKED CARDS */}
+          {/* RIGHT COLUMN */}
           <AnimateIn>
             <div className="grid gap-6">
               <GlassPoint
