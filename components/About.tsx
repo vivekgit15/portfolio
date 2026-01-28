@@ -1,151 +1,144 @@
-import AnimateIn from "@/components/AnimateIn";
 import Image from "next/image";
+import { GraduationCap } from "lucide-react";
 
 export default function About() {
   return (
     <section
       id="about"
-      className="relative scroll-mt-24 pt-16 pb-28 overflow-hidden"
+      className="relative scroll-mt-24 py-24 overflow-hidden"
     >
       {/* background glow */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/3 left-[-10%] h-[400px] w-[400px] rounded-full bg-blue-500/20 blur-[120px]" />
-        <div className="absolute bottom-1/3 right-[-10%] h-[400px] w-[400px] rounded-full bg-purple-500/20 blur-[120px]" />
+        <div className="absolute top-1/3 left-[-15%] h-[420px] w-[420px] rounded-full bg-blue-500/10 blur-[140px]" />
+        <div className="absolute bottom-1/3 right-[-15%] h-[420px] w-[420px] rounded-full bg-purple-500/10 blur-[140px]" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-6">
-        {/* heading */}
-        <AnimateIn>
+      <div className="mx-auto max-w-6xl px-6">
+        {/* HEADER */}
+        <div className="text-center mb-20">
+          <span className="inline-block mb-4 px-4 py-1 text-sm rounded-full bg-white/5 border border-white/10 text-gray-300">
+            Get to know me
+          </span>
+
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-            About{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Me
-            </span>
+            About Me
           </h2>
-          <p className="text-gray-400 max-w-2xl mb-16">
+
+          <p className="text-gray-400 max-w-2xl mx-auto">
             Who I am, how I think, and what I focus on as a software developer.
           </p>
-        </AnimateIn>
+        </div>
 
-        <div className="grid gap-12 lg:grid-cols-2 items-start">
-          {/* LEFT COLUMN */}
-          <AnimateIn>
-            <div className="space-y-10">
-              {/* IMAGE CARD */}
-              <div
-                className="
-                  relative w-[260px] h-[320px] mx-auto lg:mx-0
-                  rounded-3xl overflow-hidden
-                  bg-white/5 backdrop-blur-xl
-                  border border-white/10
-                  shadow-2xl
-                "
-              >
-                {/* glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 blur-2xl opacity-40" />
-
-                <Image
-                  src="/images/vivek.jpg"
-                  alt="Vivek - Software Developer"
-                  fill
-                  priority
-                  className="relative object-cover rounded-3xl"
-                />
-              </div>
-
-              {/* PROFILE CARD */}
-              <div
-                className="
-                  relative rounded-3xl p-8 md:p-10
-                  bg-white/5 backdrop-blur-xl
-                  border border-white/10
-                  shadow-2xl
-                "
-              >
-                {/* gradient overlay */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-transparent pointer-events-none" />
-
-                <h3 className="relative text-2xl font-semibold mb-6">
-                  Developer Profile
-                </h3>
-
-                <p className="relative text-gray-300 leading-relaxed mb-5">
-                  I am a BCA student and aspiring software developer focused on
-                  building clean, scalable, and production-ready applications.
-                  My core strengths include Java, Data Structures, and modern
-                  full-stack development using Next.js and TypeScript.
-                </p>
-
-                <p className="relative text-gray-400 leading-relaxed">
-                  I prioritize real-world engineering practices—clear architecture,
-                  maintainable code, and user-focused design—over shortcuts or
-                  superficial implementations.
-                </p>
-
-                {/* stats */}
-                <div className="relative mt-10 grid grid-cols-3 gap-6">
-                  <Stat label="Projects Built" value="10+" />
-                  <Stat label="Tech Stack" value="MERN" />
-                  <Stat label="Focus" value="Full-Stack" />
-                </div>
-              </div>
-            </div>
-          </AnimateIn>
-
-          {/* RIGHT COLUMN */}
-          <AnimateIn>
-            <div className="grid gap-6">
-              <GlassPoint
-                title="Engineering Mindset"
-                text="I value structure, readability, and long-term maintainability over quick fixes."
-              />
-              <GlassPoint
-                title="Hands-on Learning"
-                text="Most of my learning comes from building, breaking, debugging, and rebuilding real systems."
-              />
-              <GlassPoint
-                title="Career Direction"
-                text="Actively preparing for software developer roles where I can grow with real-world responsibility."
+        {/* ABOUT CONTENT */}
+        <div className="flex flex-col md:flex-row gap-14 items-start mb-24">
+          {/* IMAGE */}
+          <div className="shrink-0">
+            <div className="relative w-[220px] h-[280px] rounded-2xl overflow-hidden border border-white/10 shadow-xl">
+              <Image
+                src="/images/vivek.jpg"
+                alt="Vivek - Software Developer"
+                fill
+                className="object-cover"
+                priority
               />
             </div>
-          </AnimateIn>
+          </div>
+
+          {/* TEXT */}
+          <div className="flex-1">
+            <h3 className="text-2xl font-semibold mb-1">
+              Vivek
+            </h3>
+
+            <p className="text-blue-400 mb-6">
+              Software Developer
+            </p>
+
+            <p className="text-gray-300 leading-relaxed mb-4">
+              I am a BCA student and aspiring software developer focused on
+              building clean, scalable, and production-ready applications.
+              My core strengths include Java, Data Structures, and modern
+              full-stack development using Next.js and TypeScript.
+            </p>
+
+            <p className="text-gray-400 leading-relaxed">
+              I prioritize real-world engineering practices—clear architecture,
+              maintainable code, and user-focused design—over shortcuts.
+            </p>
+          </div>
+        </div>
+
+        {/* EDUCATION */}
+        <div>
+          <h3 className="text-2xl font-semibold mb-8">
+            Education
+          </h3>
+
+          <div className="space-y-6">
+            <EducationCard
+              degree="BCA (Bachelor of Computer Applications)"
+              institute="Netaji Subhas University"
+              year="2022 – 2025"
+              location="Jharkhand, India"
+            />
+
+            <EducationCard
+              degree="Diploma in Computer Science"
+              institute="Birla Institute of Technology"
+              year="2024"
+              location="Mesra, Ranchi, JH"
+            />
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-/* ---------- helpers ---------- */
+/* ---------- Education Card ---------- */
 
-function GlassPoint({
-  title,
-  text,
+function EducationCard({
+  degree,
+  institute,
+  year,
+  location,
 }: {
-  title: string;
-  text: string;
+  degree: string;
+  institute: string;
+  year: string;
+  location: string;
 }) {
   return (
     <div
       className="
-        rounded-2xl p-6
+        flex gap-5 items-start
+        rounded-2xl p-6 md:p-7
         bg-white/5 backdrop-blur-xl
         border border-white/10
         shadow-lg
-        hover:shadow-purple-500/10
-        transition
       "
     >
-      <h4 className="font-medium text-lg mb-2">{title}</h4>
-      <p className="text-gray-400 text-sm leading-relaxed">{text}</p>
-    </div>
-  );
-}
+      {/* icon */}
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400">
+        <GraduationCap size={22} />
+      </div>
 
-function Stat({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-xl bg-black/30 border border-white/10 p-4 text-center">
-      <p className="text-xl font-semibold">{value}</p>
-      <p className="text-xs text-gray-400 mt-1">{label}</p>
+      {/* content */}
+      <div>
+        <h4 className="text-lg font-semibold mb-1">
+          {degree}
+        </h4>
+
+        <p className="text-gray-300 mb-2">
+          {institute}
+        </p>
+
+        <div className="text-sm text-gray-400 flex flex-wrap gap-x-4 gap-y-1">
+          <span>{year}</span>
+          <span>•</span>
+          <span>{location}</span>
+        </div>
+      </div>
     </div>
   );
 }

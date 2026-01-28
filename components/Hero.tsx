@@ -20,7 +20,7 @@ export default function Hero() {
 
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight">
             Hello, I’m{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Vivek
             </span>
           </h1>
@@ -32,11 +32,11 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <Button asChild size="lg">
-              <Link href="/projects">View Projects</Link>
+              <Link href="#projects">View Projects</Link>
             </Button>
 
             <Button asChild size="lg" variant="outline">
-              <Link href="/contact">Contact Me</Link>
+              <Link href="#contact">Contact Me</Link>
             </Button>
           </div>
 
