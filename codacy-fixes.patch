@@ -1,0 +1,51 @@
+diff --git a/components/ui/button.tsx b/components/ui/button.tsx
+--- a/components/ui/button.tsx
++++ b/components/ui/button.tsx
+@@ -58,1 +58,1 @@
+-      className={cn(buttonVariants({ variant, size, className }))}
++      className={cn(buttonVariants({ variant: variant, size, className }))}
+diff --git a/components/ui/form.tsx b/components/ui/form.tsx
+--- a/components/ui/form.tsx
++++ b/components/ui/form.tsx
+@@ -59,1 +59,1 @@
+-    id,
++    id: id,
+diff --git a/components/Skills.tsx b/components/Skills.tsx
+--- a/components/Skills.tsx
++++ b/components/Skills.tsx
+@@ -76,1 +76,1 @@
+-                  className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${group.color} pointer-events-none`}
++                  className={"absolute inset-0 rounded-2xl bg-gradient-to-br "+group.color+" pointer-events-none"}
+diff --git a/components/ui/alert.tsx b/components/ui/alert.tsx
+--- a/components/ui/alert.tsx
++++ b/components/ui/alert.tsx
+@@ -31,1 +31,1 @@
+-      className={cn(alertVariants({ variant }), className)}
++      className={cn(alertVariants({ variant: variant }), className)}
+diff --git a/components/Contact.tsx b/components/Contact.tsx
+--- a/components/Contact.tsx
++++ b/components/Contact.tsx
+@@ -37,1 +37,1 @@
+-      `Portfolio Contact from ${values.name}`
++      "Portfolio Contact from "+values.name
+@@ -40,1 +40,1 @@
+-      `Name: ${values.name}\nEmail: ${values.email}\n\nMessage:\n${values.message}`
++      "Name: "+values.name+"\nEmail: "+values.email+"\n\nMessage:\n"+values.message
+@@ -43,1 +43,1 @@
+-    window.location.href = `mailto:your@email.com?subject=${subject}&body=${body}`;
++    window.location.href = "mailto:your@email.com?subject="+subject+"&body="+body;
+diff --git a/components/Navbar.tsx b/components/Navbar.tsx
+--- a/components/Navbar.tsx
++++ b/components/Navbar.tsx
+@@ -24,1 +24,1 @@
+-              href={`#${link.id}`}
++              href={"#"+link.id}
+diff --git a/components/Projects.tsx b/components/Projects.tsx
+--- a/components/Projects.tsx
++++ b/components/Projects.tsx
+@@ -134,1 +134,1 @@
+-        {project.github && (
++        {(project.github != null) && (
+@@ -145,1 +145,1 @@
+-        {project.live && (
++        {(project.live != null) && (

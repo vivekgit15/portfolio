@@ -73,7 +73,7 @@ export default function Skills() {
               >
                 {/* gradient overlay */}
                 <div
-                  className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${group.color} pointer-events-none`}
+                  className={"absolute inset-0 rounded-2xl bg-gradient-to-br " + group.color + " pointer-events-none"}
                 />
 
                 <h3 className="relative text-xl font-semibold mb-5">
